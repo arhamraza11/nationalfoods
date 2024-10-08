@@ -13,7 +13,7 @@
     background-color: #f7f7f7;
     overflow: hidden;
     min-width: 700px;
-    
+
 }
 
 .chat-header {
@@ -31,16 +31,18 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    position: relative; /* Needed for positioning the overlay */
-    
-    
-    
-   
+    position: relative;
+    /* Needed for positioning the overlay */
+
+
+
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.chat-body-background{
+
+.chat-body-background {
     height: 97%;
     width: 97%;
     background-image: url("image.jpg");
@@ -76,7 +78,7 @@
     background-color: #9bcf00;
     align-self: flex-start;
     border-bottom-left-radius: 0;
-    color:#343434;
+    color: #343434;
 }
 
 .chat-footer {
