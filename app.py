@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer
 from mistralai.models.chat_completion import ChatMessage
 from flask_cors import CORS
 app = Flask(__name__)
-CORS(app, resources={r"/recipe": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/recipe": {"origins": "http://localhost:3002"}})
 # ===========================
 # Initialization and Setup
 # ===========================
@@ -82,7 +82,7 @@ def generate_recipe_response(user_ingredients, search_results):
 
     # Prepare the messages for Mistral AI
     final_prompt=(f"you represent National foods.if the user message is only about greetings respond him in that manner.If user asks about any thing related to food or recipe creation use the context below to answer him in that manner "
-        f"Regards should always be from national food bot"
+        f"Regards should always be from national food bot.Respond to generic queries too like diet or anything like that if you think user is asking about that thing"
         f"Context:\n{context}\n\nUser Query:\n{user_input}\n\nResponse:")
 
     # Call the Mistral client to generate a response

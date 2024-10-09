@@ -46,7 +46,7 @@ const ChatWidget = () => {
                 : { role: 'assistant', content: 'Sorry, I did not understand your request.' };
             setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
-            const errorMessage = { role: 'assistant', content: 'An error occurred while processing your request.' };
+            const errorMessage = { role: 'assistant', content: 'An error occurred while processing your request.'+error };
             setMessages((prevMessages) => [...prevMessages, errorMessage]);
         } finally {
             setIsSending(false); // Set loading state to false after response
