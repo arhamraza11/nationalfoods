@@ -1,0 +1,15 @@
+{
+  "name": "national-foods",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "cd backend && flask run",
+    "start-frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build && xcopy /E /I build backend\\build",
+    "install-all": "concurrently \"cd frontend && npm install\" \"cd backend && pip install -r requirements.txt\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

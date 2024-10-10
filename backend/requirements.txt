@@ -1,0 +1,5 @@
+Flask
+flask-cors
+mistralai
+qdrant-client
+sentence-transformers
